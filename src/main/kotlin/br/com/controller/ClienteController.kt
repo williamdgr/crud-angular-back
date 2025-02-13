@@ -2,6 +2,7 @@ package br.com.controller
 
 import br.com.model.Cliente
 import br.com.repository.ClienteRepository
+import io.swagger.annotations.Api
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/")
 @CrossOrigin(origins = ["*"])
+@Api(tags = ["Clientes"])
 class TopicoController(private val repository: ClienteRepository) {
 
     @PostMapping
